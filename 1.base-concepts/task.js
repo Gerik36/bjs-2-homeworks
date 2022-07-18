@@ -34,7 +34,7 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
    	} else {
 			
   		let today = new Date();
-  		if (today.getFullYear() > date.getFullYear()) {
+  		if (today.getFullYear() > date.getFullYear() || today.getMonth() > date.getMonth()) {
 			return `Параметр "срок ипотеки" содержит неправильное значение ${date}`;
 		} else {
 			let s = am - con;						  //тело кредита
